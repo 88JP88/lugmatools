@@ -1608,9 +1608,9 @@ Flight::route('POST /putTask', function () {
 
         
 
-        $query= mysqli_query($conectar,"UPDATE personal_task SET value='$task',finish_date='$fdata',start_date='$sdata',prior='$priority' WHERE profile_id='$profile' and task_id='$task_id'");
-
-        echo 'true';
+       $query= mysqli_query($conectar,"UPDATE personal_task SET value='$task',finish_date='$fdata',start_date='$sdata',prior='$priority' WHERE profile_id='$profile' and task_id='$task_id'");
+//echo $task_id." ". $profile;
+  echo 'true';
     } catch (Exception $e) {
         echo 'Error: ' . $e->getMessage();
     }
